@@ -6,13 +6,13 @@
 /*   By: stestein <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2018/02/26 10:29:57 by stestein          #+#    #+#             */
-/*   Updated: 2018/03/02 12:07:57 by stestein         ###   ########.fr       */
+/*   Updated: 2018/03/12 11:59:27 by stestein         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-void	*ft_memalloc(unsigned int n)
+void	*ft_memalloc(size_t size)
 {
 	void *s;
 	char *str;
@@ -20,11 +20,11 @@ void	*ft_memalloc(unsigned int n)
 
 
 	i = 0;
-	s = malloc(n);
+	s = malloc(size);
 	str = (char *)s;
 	if (s == NULL)
 		return (NULL);
-	while(i < n)
+	while(i < size)
 	{
 		str[i] = '\0';
 		i++;

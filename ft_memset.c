@@ -6,13 +6,13 @@
 /*   By: stestein <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2018/02/20 17:18:19 by stestein          #+#    #+#             */
-/*   Updated: 2018/02/22 10:07:34 by stestein         ###   ########.fr       */
+/*   Updated: 2018/03/12 12:07:34 by stestein         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-void	*ft_memset(void *b, int c, unsigned int len)
+void	*ft_memset(void *b, int c, size_t len)
 {
 	char *p;
 

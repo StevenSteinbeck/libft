@@ -1,29 +1,19 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_bzero.c                                         :+:      :+:    :+:   */
+/*   ft_lstadd.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: stestein <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2018/02/21 11:08:10 by stestein          #+#    #+#             */
-/*   Updated: 2018/03/12 12:10:37 by stestein         ###   ########.fr       */
+/*   Created: 2018/03/12 13:36:46 by stestein          #+#    #+#             */
+/*   Updated: 2018/03/12 14:29:57 by stestein         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-void	ft_bzero(void *s, size_t n)
+void	ft_lstadd(t_list **alst, t_list *new)
 {
-	char *str;
-	unsigned int i;
-
-	i = 0;
-	str = (char *)s;
-	if (n == 0)
-		return ;
-	while (i < n)
-	{
-		str[i] = '\0';
-		i++;
-	}
+	new->next = *alst;
+	*alst = new;
 }

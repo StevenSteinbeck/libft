@@ -6,13 +6,13 @@
 /*   By: stestein <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2018/03/01 10:46:17 by stestein          #+#    #+#             */
-/*   Updated: 2018/03/02 12:02:01 by stestein         ###   ########.fr       */
+/*   Updated: 2018/03/12 14:17:15 by stestein         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-int        getsize(int n)
+static int        getsize(int n)
 {
     int i;
 
@@ -27,7 +27,7 @@ int        getsize(int n)
     return (i);
 }
 
-char    *placer(char *str, int i, int n, int p)
+static char    *placer(char *str, int i, int n, int p)
 {
     int x;
 
@@ -51,7 +51,7 @@ char    *placer(char *str, int i, int n, int p)
     return (str);
 }
 
-char	*minint(char *str, char *min, int p)
+static char		*minint(char *str, char *min, int p)
 {
 	while (min[p] != '0')
 	{

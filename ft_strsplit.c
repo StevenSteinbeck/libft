@@ -6,7 +6,7 @@
 /*   By: stestein <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2018/02/28 08:58:50 by stestein          #+#    #+#             */
-/*   Updated: 2018/03/03 16:00:24 by stestein         ###   ########.fr       */
+/*   Updated: 2018/03/12 14:16:44 by stestein         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -31,21 +31,21 @@ static int		cnt(char const *s, char c)
 	return (cntr);
 }
 
-int				starter(const char *s, char c, int i)
+static int			starter(const char *s, char c, int i)
 {
 	while (s[i] == c)
 		i++;
 	return (i);
 }
 
-int				ender(const char *s, char c, int w)
+static int			ender(const char *s, char c, int w)
 {
 	while (s[w] && s[w] != c)
 		w++;
 	return (w);
 }
 
-char			*copyer(const char *s, char *str, int i, int w)
+static char			*copyer(const char *s, char *str, int i, int w)
 {
 	int		p;
 

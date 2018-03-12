@@ -6,13 +6,13 @@
 /*   By: stestein <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2018/02/20 09:21:08 by stestein          #+#    #+#             */
-/*   Updated: 2018/02/23 09:57:06 by stestein         ###   ########.fr       */
+/*   Updated: 2018/03/12 12:35:30 by stestein         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-int		ft_strncmp(const char *s1, const char *s2, unsigned int n)
+int		ft_strncmp(const char *s1, const char *s2, size_t n)
 {
 	unsigned int i;
 	unsigned char *c1;

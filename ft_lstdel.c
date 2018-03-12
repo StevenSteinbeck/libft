@@ -1,29 +1,20 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_bzero.c                                         :+:      :+:    :+:   */
+/*   ft_lstdel.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: stestein <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2018/02/21 11:08:10 by stestein          #+#    #+#             */
-/*   Updated: 2018/03/12 12:10:37 by stestein         ###   ########.fr       */
+/*   Created: 2018/03/12 13:49:35 by stestein          #+#    #+#             */
+/*   Updated: 2018/03/12 14:15:47 by stestein         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-void	ft_bzero(void *s, size_t n)
+void	ft_lstdel(t_list **alst, void (*del)(void *, size_t))
 {
-	char *str;
-	unsigned int i;
-
-	i = 0;
-	str = (char *)s;
-	if (n == 0)
-		return ;
-	while (i < n)
-	{
-		str[i] = '\0';
-		i++;
-	}
+	if ((*alst)->next)
+		ft_lstdel(&(*alst)->next, del);
+	ft_lstdelone(&(*alst), del);
 }

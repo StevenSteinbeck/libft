@@ -6,13 +6,13 @@
 /*   By: stestein <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2018/02/21 14:25:55 by stestein          #+#    #+#             */
-/*   Updated: 2018/02/22 11:04:50 by stestein         ###   ########.fr       */
+/*   Updated: 2018/03/12 12:11:31 by stestein         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-void	*ft_memccpy(void *s1, const void *s2, int x, unsigned int n)
+void	*ft_memccpy(void *s1, const void *s2, int x, size_t n)
 {
 	unsigned int i;
 	unsigned char *c1;

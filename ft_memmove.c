@@ -6,13 +6,13 @@
 /*   By: stestein <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2018/02/21 14:49:23 by stestein          #+#    #+#             */
-/*   Updated: 2018/02/22 11:29:35 by stestein         ###   ########.fr       */
+/*   Updated: 2018/03/12 12:13:07 by stestein         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-void	*ft_memmove(void *s1, const void *s2, unsigned int n)
+void	*ft_memmove(void *s1, const void *s2, size_t len)
 {
 	char *c1;
 	char *c2;
@@ -23,10 +23,10 @@ void	*ft_memmove(void *s1, const void *s2, unsigned int n)
 	c2 = (char *)s2;
 	if (c2 < c1)
 	{
-		while (n--)
-			c1[n] = c2[n];
+		while (len--)
+			c1[len] = c2[len];
 	}
 	else
-		ft_memcpy(c1, c2, n);
+		ft_memcpy(c1, c2, len);
 	return (s1);
 }
