@@ -6,7 +6,7 @@
 #    By: stestein <marvin@42.fr>                    +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2018/02/19 10:58:31 by stestein          #+#    #+#              #
-#    Updated: 2018/03/12 14:40:51 by stestein         ###   ########.fr        #
+#    Updated: 2018/03/12 14:54:40 by stestein         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -32,5 +32,9 @@ fclean: clean
 	/bin/rm -f $(NAME)
 
 re: fclean all
+	gcc -Wall -Wextra -Werror -c *.c -I $(INCLUDES)
+	ar rc $(NAME) $(OUT)
+	ranlib $(NAME)
+
 
 .PHONY: clean fclean re
