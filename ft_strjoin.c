@@ -6,7 +6,7 @@
 /*   By: stestein <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2018/02/26 15:21:08 by stestein          #+#    #+#             */
-/*   Updated: 2018/02/26 15:57:45 by stestein         ###   ########.fr       */
+/*   Updated: 2018/03/12 19:53:42 by stestein         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -20,6 +20,8 @@ char	*ft_strjoin(char const *s1, char const *s2)
 
 	i = 0;
 	c = 0;
+	if (s1 == NULL || s2 == NULL)
+		return (NULL);
 	str = (char *)malloc(sizeof(*str) * (ft_strlen(s1) + ft_strlen(s2)) + 1);
 	if (str == NULL)
 		return (NULL);

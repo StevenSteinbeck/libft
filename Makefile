@@ -6,15 +6,15 @@
 #    By: stestein <marvin@42.fr>                    +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2018/02/19 10:58:31 by stestein          #+#    #+#              #
-#    Updated: 2018/03/12 15:24:40 by stestein         ###   ########.fr        #
+#    Updated: 2018/03/12 18:59:31 by stestein         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
 NAME = libft.a
 
-SRCS = *.c
+SRCS = $(wildcard *.c)
 
-OUT = *.o
+OUT = $(patsubst %.c, %.o, $(SRCS))
 
 INCLUDES = *.h
 

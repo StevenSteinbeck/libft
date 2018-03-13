@@ -6,13 +6,14 @@
 /*   By: stestein <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2018/02/19 10:47:06 by stestein          #+#    #+#             */
-/*   Updated: 2018/03/12 19:18:04 by stestein         ###   ########.fr       */
+/*   Updated: 2018/03/12 20:00:16 by stestein         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #ifndef LIBFT_H
 # define LIBFT_H
 # define STEVEN int i = 0; int w = 0; int pos = 0; char *str;
+# define TRIM 	int i = 0; char *str; int n = 0;
 
 # include <unistd.h>
 # include <stdlib.h>

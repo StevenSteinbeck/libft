@@ -6,7 +6,7 @@
 /*   By: stestein <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2018/02/26 13:24:39 by stestein          #+#    #+#             */
-/*   Updated: 2018/03/12 12:02:09 by stestein         ###   ########.fr       */
+/*   Updated: 2018/03/12 19:51:27 by stestein         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -17,6 +17,8 @@ char	*ft_strmap(char const *s, char (*f)(char))
 	unsigned int i;
 	char *str;
 
+	if (s == NULL || f == NULL)
+		return (NULL);
 	i = 0;
 	str = (char *)malloc(sizeof(*str) * (ft_strlen(s) + 1));
 	if (str == NULL)

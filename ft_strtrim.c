@@ -6,7 +6,7 @@
 /*   By: stestein <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2018/02/26 15:58:14 by stestein          #+#    #+#             */
-/*   Updated: 2018/03/02 12:32:08 by stestein         ###   ########.fr       */
+/*   Updated: 2018/03/12 20:04:15 by stestein         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -36,12 +36,11 @@ static int		length_count(const char *str)
 
 char	*ft_strtrim(char const *s)
 {
-	int		i;
+	TRIM;
 	int		length;
-	char	*str;
-	int		n;
 
-	i = 0;
+	if (s == NULL)
+		return (NULL);
 	length = length_count(s);
 	while (s[i] == ' ' || s[i] == '\t' || s[i] == '\n')
 		i++;

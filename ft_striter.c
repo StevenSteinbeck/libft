@@ -6,7 +6,7 @@
 /*   By: stestein <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2018/02/26 12:42:19 by stestein          #+#    #+#             */
-/*   Updated: 2018/02/26 13:09:53 by stestein         ###   ########.fr       */
+/*   Updated: 2018/03/12 19:46:21 by stestein         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -17,6 +17,8 @@ void	ft_striter(char *s, void (*f)(char *))
 	int i;
 
 	i = 0;
+	if (s == NULL || f == NULL)
+		return ;
 	while (s[i])
 	{
 		(*f)(s + i);

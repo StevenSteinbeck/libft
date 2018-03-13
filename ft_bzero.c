@@ -6,7 +6,7 @@
 /*   By: stestein <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2018/02/21 11:08:10 by stestein          #+#    #+#             */
-/*   Updated: 2018/03/12 12:10:37 by stestein         ###   ########.fr       */
+/*   Updated: 2018/03/12 20:06:28 by stestein         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,8 +14,8 @@
 
 void	ft_bzero(void *s, size_t n)
 {
-	char *str;
-	unsigned int i;
+	char			*str;
+	unsigned int	i;
 
 	i = 0;
 	str = (char *)s;
