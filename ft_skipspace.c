@@ -1,25 +1,23 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_putstr.c                                        :+:      :+:    :+:   */
+/*   ft_skipspace.c                                     :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: stestein <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2018/02/24 12:49:39 by stestein          #+#    #+#             */
-/*   Updated: 2018/03/13 11:25:49 by stestein         ###   ########.fr       */
+/*   Created: 2018/03/13 11:20:36 by stestein          #+#    #+#             */
+/*   Updated: 2018/03/13 12:12:43 by stestein         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-void	ft_putstr(char const *s)
+int		ft_skipspace(char *str)
 {
-	unsigned int i;
+	int i;
 
 	i = 0;
-	while (s[i])
-	{
-		ft_putchar(s[i]);
+	while (str[i] && str[i] = ' ')
 		i++;
-	}
+	return (i);
 }
