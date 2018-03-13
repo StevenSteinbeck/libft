@@ -6,7 +6,7 @@
 /*   By: stestein <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2018/02/28 08:58:50 by stestein          #+#    #+#             */
-/*   Updated: 2018/03/12 18:29:25 by stestein         ###   ########.fr       */
+/*   Updated: 2018/03/12 18:37:24 by stestein         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -80,26 +80,9 @@ char			**ft_strsplit(char const *s, char c)
 			return (NULL);
 		str = copyer(s, str, i, w);
 		tab[pos] = str;
-	//	if (pos + 1 > cnt(s, c))
-	//		return (tab);
 		pos++;
 		i = w - 1;
 		i++;
 	}
 	return (tab);
 }
-
-
-/*int		main(void)
-{
-	char **n;
-	static int	i;
-
-	n = ft_strsplit("***salud****!**y", '*');
-	while (n[i])
-	{
-		printf("%s\n", n[i]);
-		i++;
-	}
-	return (0);
-}*/
