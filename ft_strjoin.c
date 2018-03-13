@@ -6,7 +6,7 @@
 /*   By: stestein <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2018/02/26 15:21:08 by stestein          #+#    #+#             */
-/*   Updated: 2018/03/12 19:53:42 by stestein         ###   ########.fr       */
+/*   Updated: 2018/03/13 10:28:39 by stestein         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,9 +14,9 @@
 
 char	*ft_strjoin(char const *s1, char const *s2)
 {
-	char *str;
-	int i;
-	int c;
+	char	*str;
+	int		i;
+	int		c;
 
 	i = 0;
 	c = 0;

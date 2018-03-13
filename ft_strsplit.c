@@ -6,13 +6,13 @@
 /*   By: stestein <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2018/02/28 08:58:50 by stestein          #+#    #+#             */
-/*   Updated: 2018/03/12 18:37:24 by stestein         ###   ########.fr       */
+/*   Updated: 2018/03/13 10:38:27 by stestein         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-static int		cnt(char const *s, char c)
+static int			cnt(char const *s, char c)
 {
 	unsigned int	i;
 	int				cntr;
@@ -60,7 +60,7 @@ static char			*copyer(const char *s, char *str, int i, int w)
 	return (str);
 }
 
-char			**ft_strsplit(char const *s, char c)
+char				**ft_strsplit(char const *s, char c)
 {
 	char **tab;
 

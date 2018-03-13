@@ -6,7 +6,7 @@
 /*   By: stestein <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2018/02/19 11:10:43 by stestein          #+#    #+#             */
-/*   Updated: 2018/03/12 19:40:27 by stestein         ###   ########.fr       */
+/*   Updated: 2018/03/13 10:24:53 by stestein         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,9 +14,9 @@
 
 int		ft_strcmp(const char *s1, const char *s2)
 {
-	unsigned char *c1;
-	unsigned char *c2;
-	size_t i;
+	unsigned char	*c1;
+	unsigned char	*c2;
+	size_t			i;
 
 	c1 = (unsigned char *)s1;
 	c2 = (unsigned char *)s2;
@@ -26,6 +26,6 @@ int		ft_strcmp(const char *s1, const char *s2)
 		if (c1[i] != c2[i])
 			return (c1[i] - c2[i]);
 		i++;
-	}		
+	}
 	return (0);
 }

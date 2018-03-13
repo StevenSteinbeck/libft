@@ -6,7 +6,7 @@
 /*   By: stestein <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2018/02/20 09:21:08 by stestein          #+#    #+#             */
-/*   Updated: 2018/03/12 12:35:30 by stestein         ###   ########.fr       */
+/*   Updated: 2018/03/13 10:35:12 by stestein         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,9 +14,9 @@
 
 int		ft_strncmp(const char *s1, const char *s2, size_t n)
 {
-	unsigned int i;
-	unsigned char *c1;
-	unsigned char *c2;
+	unsigned int	i;
+	unsigned char	*c1;
+	unsigned char	*c2;
 
 	c1 = (unsigned char *)s1;
 	c2 = (unsigned char *)s2;

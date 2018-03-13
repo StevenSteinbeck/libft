@@ -6,7 +6,7 @@
 /*   By: stestein <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2018/02/19 11:20:02 by stestein          #+#    #+#             */
-/*   Updated: 2018/02/22 12:43:19 by stestein         ###   ########.fr       */
+/*   Updated: 2018/03/13 10:26:33 by stestein         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,9 +14,9 @@
 
 char	*ft_strdup(char *str)
 {
-	int i;
-	int size;
-	char *dup;
+	int		i;
+	int		size;
+	char	*dup;
 
 	i = 0;
 	size = 0;

@@ -6,7 +6,7 @@
 /*   By: stestein <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2018/02/26 13:24:39 by stestein          #+#    #+#             */
-/*   Updated: 2018/03/12 19:51:56 by stestein         ###   ########.fr       */
+/*   Updated: 2018/03/13 10:30:52 by stestein         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,8 +14,8 @@
 
 char	*ft_strmapi(char const *s, char (*f)(unsigned int, char))
 {
-	unsigned int i;
-	char *str;
+	unsigned int	i;
+	char			*str;
 
 	if (s == NULL || f == NULL)
 		return (NULL);

@@ -6,7 +6,7 @@
 /*   By: stestein <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2018/02/21 09:40:02 by stestein          #+#    #+#             */
-/*   Updated: 2018/02/22 16:33:09 by stestein         ###   ########.fr       */
+/*   Updated: 2018/03/13 10:37:46 by stestein         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,8 +14,8 @@
 
 char	*ft_strrchr(const char *s, int c)
 {
-	int i;
-	char *str;
+	int		i;
+	char	*str;
 
 	str = (char *)s;
 	i = ft_strlen(str);

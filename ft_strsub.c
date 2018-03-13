@@ -6,7 +6,7 @@
 /*   By: stestein <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2018/02/26 14:07:27 by stestein          #+#    #+#             */
-/*   Updated: 2018/03/12 12:03:21 by stestein         ###   ########.fr       */
+/*   Updated: 2018/03/13 10:39:44 by stestein         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,8 +14,8 @@
 
 char	*ft_strsub(char const *s, unsigned int start, size_t len)
 {
-	unsigned int i;
-	char *str;
+	unsigned int	i;
+	char			*str;
 
 	i = 0;
 	if (s == NULL)
@@ -31,4 +31,3 @@ char	*ft_strsub(char const *s, unsigned int start, size_t len)
 	str[i] = '\0';
 	return (str);
 }
-		

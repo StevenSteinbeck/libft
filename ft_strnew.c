@@ -6,7 +6,7 @@
 /*   By: stestein <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2018/02/26 11:50:35 by stestein          #+#    #+#             */
-/*   Updated: 2018/03/12 12:07:10 by stestein         ###   ########.fr       */
+/*   Updated: 2018/03/13 10:36:37 by stestein         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,9 +14,9 @@
 
 char	*ft_strnew(size_t size)
 {
-	char *str;
-	unsigned int i;
-	void *s;
+	char			*str;
+	unsigned int	i;
+	void			*s;
 
 	i = 0;
 	s = malloc(size + 1);

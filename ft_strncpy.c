@@ -6,7 +6,7 @@
 /*   By: stestein <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2018/02/20 09:47:43 by stestein          #+#    #+#             */
-/*   Updated: 2018/03/12 12:17:49 by stestein         ###   ########.fr       */
+/*   Updated: 2018/03/13 10:35:38 by stestein         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,8 +14,8 @@
 
 char	*ft_strncpy(char *s1, const char *s2, size_t len)
 {
-	unsigned int i;
-	char *s;
+	unsigned int	i;
+	char			*s;
 
 	s = (char *)s2;
 	i = 0;

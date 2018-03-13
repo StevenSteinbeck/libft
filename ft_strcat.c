@@ -6,7 +6,7 @@
 /*   By: stestein <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2018/02/20 11:34:10 by stestein          #+#    #+#             */
-/*   Updated: 2018/02/26 15:34:08 by stestein         ###   ########.fr       */
+/*   Updated: 2018/03/13 10:23:17 by stestein         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -29,4 +29,3 @@ char	*ft_strcat(char *dest, const char *src)
 	dest[i + j] = '\0';
 	return (dest);
 }
-

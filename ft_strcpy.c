@@ -6,7 +6,7 @@
 /*   By: stestein <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2018/02/19 17:11:30 by stestein          #+#    #+#             */
-/*   Updated: 2018/02/22 12:40:00 by stestein         ###   ########.fr       */
+/*   Updated: 2018/03/13 10:25:40 by stestein         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,15 +15,15 @@
 char	*ft_strcpy(char *s1, const char *s2)
 {
 	unsigned int	i;
-	char *s;
+	char			*s;
 
 	s = (char *)s2;
 	i = 0;
-	while(s[i] != '\0')
+	while (s[i] != '\0')
 	{
 		s1[i] = s[i];
 		i++;
 	}
 	s1[i] = '\0';
-	return(s1);
+	return (s1);
 }

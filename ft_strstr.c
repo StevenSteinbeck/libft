@@ -6,13 +6,13 @@
 /*   By: stestein <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2018/02/20 16:45:47 by stestein          #+#    #+#             */
-/*   Updated: 2018/02/27 13:33:51 by stestein         ###   ########.fr       */
+/*   Updated: 2018/03/13 10:39:13 by stestein         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-char *ft_strstr(const char *str, const char *to_find)
+char	*ft_strstr(const char *str, const char *to_find)
 {
 	unsigned int i;
 	unsigned int j;
@@ -32,4 +32,3 @@ char *ft_strstr(const char *str, const char *to_find)
 	}
 	return (0);
 }
-			
