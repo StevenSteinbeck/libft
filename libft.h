@@ -6,7 +6,7 @@
 /*   By: stestein <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2018/02/19 10:47:06 by stestein          #+#    #+#             */
-/*   Updated: 2018/03/13 10:55:25 by stestein         ###   ########.fr       */
+/*   Updated: 2018/03/13 12:14:07 by stestein         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -86,5 +86,8 @@ void				ft_lstdel(t_list **alst, void (*del)(void *, size_t));
 void				ft_lstadd(t_list **alst, t_list *new);
 t_list				*ft_lstmap(t_list *lst, t_list *(*f)(t_list *elem));
 void				ft_lstiter(t_list *lst, void (*f)(t_list *elem));
+char				ft_piscine(char const *str);
+char				ft_youtube(char const *str);
+int					ft_skipspace(char *str);
 
 #endif
