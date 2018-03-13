@@ -5,82 +5,42 @@
 /*                                                    +:+ +:+         +:+     */
 /*   By: stestein <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2018/03/01 10:46:17 by stestein          #+#    #+#             */
-/*   Updated: 2018/03/12 14:17:15 by stestein         ###   ########.fr       */
+/*   Created: 2018/03/12 20:31:01 by stestein          #+#    #+#             */
+/*   Updated: 2018/03/12 20:31:25 by stestein         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-static int        getsize(int n)
+static size_t	ft_get_len(int n)
 {
-    int i;
+	size_t		i;
 
-    i = 0;
-    if(n < 0)
-      n = -n;
-    while(n > 0)
-    {
-        n = n / 10;
-        i++;
-    }
-    return (i);
+	i = 1;
+	while (n /= 10)
+		i++;
+	return (i);
 }
 
-static char    *placer(char *str, int i, int n, int p)
+char			*ft_itoa(int n)
 {
-    int x;
+	char			*str;
+	size_t			len;
+	unsigned int	tmp;
 
-    x = i;
-    if (n < 0)
-    {
-        n = -n;
-        i--;
-        x = i;
-    }
-    else if (n >= 0)
-      i--;
-    while (i >= 0 && x > 0)
-    {
-        str[i] = (n % 10) + '0';
-        n = n / 10;
-        p++;
-        i--;
-        x--;
-    }
-    return (str);
-}
-
-static char		*minint(char *str, char *min, int p)
-{
-	while (min[p] != '0')
+	len = ft_get_len(n);
+	tmp = n;
+	if (n < 0)
 	{
-		str[p] = min[p];
-		p++;
+		tmp = -n;
+		len++;
 	}
+	if (!(str = ft_strnew(len)))
+		return (NULL);
+	str[--len] = tmp % 10 + '0';
+	while (tmp /= 10)
+		str[--len] = tmp % 10 + '0';
+	if (n < 0)
+		str[0] = '-';
 	return (str);
-}
-
-char    *ft_itoa(int n)
-{
-    int i;
-    char *str;
-    int p;
-	char *min;
-
-    p = 1;
-	min = "-2147483648";
-    i = getsize(n);
-    if (n <= 0)
-      i++;
-    str = (char *)(malloc(sizeof(*str) * i + 1));
-    if (str == NULL)
-        return (NULL);
-    str[i] = '\0';
-    if (n < 0)
-      str[0] = '-';
-	if (n <= -2147483648)
-		return(minint(str, min, p));
-	p = 0;
-    return (placer(str, i, n, p));
 }
