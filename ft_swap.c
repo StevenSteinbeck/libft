@@ -1,21 +1,24 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_tolower.c                                       :+:      :+:    :+:   */
+/*   ft_swap.c                                          :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: stestein <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2018/02/20 11:27:44 by stestein          #+#    #+#             */
-/*   Updated: 2018/05/31 13:41:08 by stestein         ###   ########.fr       */
+/*   Created: 2018/05/29 15:41:04 by stestein          #+#    #+#             */
+/*   Updated: 2018/05/31 13:41:02 by stestein         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-int		ft_tolower(int x)
+void	ft_swap(void *a, void *b, size_t s)
 {
-	if (x >= 65 && x <= 90)
-		return (x + 32);
-	else
-		return (x);
+	void	*tmp;
+
+	tmp = malloc(s);
+	ft_memcpy(tmp, a, s);
+	ft_memcpy(a, b, s);
+	ft_memcpy(b, tmp, s);
+	free(tmp);
 }

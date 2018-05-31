@@ -6,7 +6,7 @@
 /*   By: stestein <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2018/02/19 11:10:43 by stestein          #+#    #+#             */
-/*   Updated: 2018/03/13 10:24:53 by stestein         ###   ########.fr       */
+/*   Updated: 2018/05/16 11:28:10 by stestein         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -27,5 +27,9 @@ int		ft_strcmp(const char *s1, const char *s2)
 			return (c1[i] - c2[i]);
 		i++;
 	}
+	if (c1[i] == '\0' && c2[i] != '\0')
+		return (69);
+	if (c2[i] == '\0' && c1[i] != '\0')
+		return (69);
 	return (0);
 }

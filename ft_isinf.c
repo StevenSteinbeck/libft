@@ -1,21 +1,21 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_tolower.c                                       :+:      :+:    :+:   */
+/*   ft_isinf.c                                         :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: stestein <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2018/02/20 11:27:44 by stestein          #+#    #+#             */
-/*   Updated: 2018/05/31 13:41:08 by stestein         ###   ########.fr       */
+/*   Created: 2018/05/29 15:42:47 by stestein          #+#    #+#             */
+/*   Updated: 2018/05/31 14:07:19 by stestein         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "libft.h"
-
-int		ft_tolower(int x)
+int		ft_isinf(double num)
 {
-	if (x >= 65 && x <= 90)
-		return (x + 32);
-	else
-		return (x);
+	double num2;
+
+	num2 = num;
+	if (num2 != num)
+		return(ft_isnan(num));
+	return (num == (1.0 / 0.0) || num == (-1.0 / 0.0));
 }

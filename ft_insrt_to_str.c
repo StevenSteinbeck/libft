@@ -1,21 +1,31 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_tolower.c                                       :+:      :+:    :+:   */
+/*   ft_insrt_to_str.c                                  :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: stestein <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2018/02/20 11:27:44 by stestein          #+#    #+#             */
-/*   Updated: 2018/05/31 13:41:08 by stestein         ###   ########.fr       */
+/*   Created: 2018/05/29 15:38:39 by stestein          #+#    #+#             */
+/*   Updated: 2018/05/31 14:00:32 by stestein         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
+# define INSRT char	*str; char *s1cpy; char *new;
 
-int		ft_tolower(int x)
+void	ft_insrt_to_str(char **s1, char *s2)
 {
-	if (x >= 65 && x <= 90)
-		return (x + 32);
-	else
-		return (x);
+	INSRT;
+	if (!s1 || !s2)
+		return ;
+	new = ft_strnew(ft_strlen(*s1) + ft_strlen(s2) + 1);
+	str = new;
+	s1cpy = *s1;
+	while (*s2)
+		*str++ = *s2++;
+	while (*s1cpy)
+		*str++ = *s1cpy++;
+	*str = '\0';
+	free(*s1);
+	*s1 = new;
 }

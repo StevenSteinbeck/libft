@@ -1,21 +1,33 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_tolower.c                                       :+:      :+:    :+:   */
+/*   ft_skipspace.c                                     :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: stestein <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2018/02/20 11:27:44 by stestein          #+#    #+#             */
-/*   Updated: 2018/05/31 13:41:08 by stestein         ###   ########.fr       */
+/*   Created: 2018/03/13 11:20:36 by stestein          #+#    #+#             */
+/*   Updated: 2018/05/31 13:40:19 by stestein         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-int		ft_tolower(int x)
+char	*ft_skipspace(char *str)
 {
-	if (x >= 65 && x <= 90)
-		return (x + 32);
-	else
-		return (x);
+	int		i;
+	char	*new;
+	int		s;
+
+	i = 0;
+	s = 0;
+	while (str[i] && str[i] == ' ')
+		i++;
+	new = (char *)malloc(sizeof(*new) * ft_strlen(str) - i + 1);
+	while (new[s])
+	{
+		new[s] = str[i];
+		s++;
+		i++;
+	}
+	return (new);
 }

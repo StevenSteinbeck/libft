@@ -1,21 +1,28 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_tolower.c                                       :+:      :+:    :+:   */
+/*   ft_countwords.c                                    :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: stestein <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2018/02/20 11:27:44 by stestein          #+#    #+#             */
-/*   Updated: 2018/05/31 13:41:08 by stestein         ###   ########.fr       */
+/*   Created: 2018/05/29 15:37:37 by stestein          #+#    #+#             */
+/*   Updated: 2018/05/29 15:37:39 by stestein         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "libft.h"
-
-int		ft_tolower(int x)
+int		ft_countwords(char const *s, char c)
 {
-	if (x >= 65 && x <= 90)
-		return (x + 32);
-	else
-		return (x);
+	int words;
+
+	words = 0;
+	while (*s)
+	{
+		while (*s == c)
+			s++;
+		if (*s != c && *s != '\0')
+			words++;
+		while (*s != c && *s != '\0')
+			s++;
+	}
+	return (words);
 }

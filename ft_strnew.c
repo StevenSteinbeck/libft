@@ -6,7 +6,7 @@
 /*   By: stestein <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2018/02/26 11:50:35 by stestein          #+#    #+#             */
-/*   Updated: 2018/03/13 10:36:37 by stestein         ###   ########.fr       */
+/*   Updated: 2018/05/31 13:40:42 by stestein         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -19,13 +19,13 @@ char	*ft_strnew(size_t size)
 	void			*s;
 
 	i = 0;
-	s = malloc(size + 1);
+	s = (char *)malloc(sizeof(char) * (size + 1));
 	str = (char *)s;
 	if (s == NULL)
 		return (NULL);
 	while (i < size)
 	{
-		str[i] = '\0';
+		str[i] = '.';
 		i++;
 	}
 	str[i] = '\0';

@@ -1,21 +1,32 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_tolower.c                                       :+:      :+:    :+:   */
+/*   ft_is_sort.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: stestein <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2018/02/20 11:27:44 by stestein          #+#    #+#             */
-/*   Updated: 2018/05/31 13:41:08 by stestein         ###   ########.fr       */
+/*   Created: 2018/05/29 15:39:07 by stestein          #+#    #+#             */
+/*   Updated: 2018/05/31 14:03:15 by stestein         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "libft.h"
-
-int		ft_tolower(int x)
+int		ft_is_sort(int *tab, int length, int (*f)(int, int))
 {
-	if (x >= 65 && x <= 90)
-		return (x + 32);
-	else
-		return (x);
+	t_libft	*head;
+	
+	head = malloc(sizeof(t_libft));
+	head->i = 0;
+	free(head);
+	if (length == 0 || length == 1)
+		return (1);
+	while (head->i < length - 1)
+	{
+		if (f(tab[head->i], tab[head->i + 1]) <= 0)
+			head->i++;
+		else
+			break ;
+	}
+	if (head->i == length - 1)
+		return (1);
+	return (0);
 }

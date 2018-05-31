@@ -1,35 +1,38 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_lstnew.c                                        :+:      :+:    :+:   */
+/*   ft_recalloc.c                                      :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: stestein <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2018/03/12 13:00:00 by stestein          #+#    #+#             */
-/*   Updated: 2018/05/31 12:18:03 by stestein         ###   ########.fr       */
+/*   Created: 2018/05/29 15:40:33 by stestein          #+#    #+#             */
+/*   Updated: 2018/05/31 14:21:51 by stestein         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-t_list	*ft_lstnew(void const *content, size_t content_size)
+void	*ft_recalloc(void *ptr, size_t src_size, size_t new_size)
 {
-	t_list		*list;
+	void *new_ptr;
+	void *check;
 
-	if ((list = (t_list *)malloc(sizeof(*list))) == NULL)
-		return (NULL);
-	if (content == NULL)
+	check = NULL;
+	if (!new_size)
 	{
-		list->content = NULL;
-		list->content_size = 0;
+		if (ptr && ptr != check)
+			free(ptr);
+		return (ptr);
 	}
-	else
+	if (!ptr && ptr != check)
+		return (ft_memalloc(new_size));
+	if (new_size <= src_size && ptr != check)
+		return (ptr);
+	new_ptr = ft_memalloc(new_size);
+	if (new_ptr && ptr != check)
 	{
-		if ((list->content = malloc(content_size)) == NULL)
-			return (NULL);
-		ft_memcpy(list->content, content, content_size);
-		list->content_size = content_size;
+		ft_memcpy(new_ptr, ptr, src_size);
+		free(ptr);
 	}
-	list->next = NULL;
-	return (list);
+	return (new_ptr);
 }

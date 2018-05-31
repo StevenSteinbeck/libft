@@ -6,13 +6,13 @@
 /*   By: stestein <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2018/02/19 11:20:02 by stestein          #+#    #+#             */
-/*   Updated: 2018/03/13 10:26:33 by stestein         ###   ########.fr       */
+/*   Updated: 2018/05/16 15:39:01 by stestein         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-char	*ft_strdup(char *str)
+char	*ft_strdup(const char *str)
 {
 	int		i;
 	int		size;
