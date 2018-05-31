@@ -70,6 +70,23 @@ SRCS = ft_atoi.c \
 	  ft_lstiter.c \
 	  ft_lstnew.c \
 	  ft_lstmap.c \
+	  ft_strndup.c \
+			ft_memalloc.c \
+			ft_recalloc.c \
+			ft_strdup.c \
+			ft_memcpy.c \
+			ft_strnew.c \
+			ft_strcpy.c \
+			ft_strchr.c \
+			ft_memset.c \
+			ft_uimaxtoa_base.c \
+			ft_strcmp.c \
+			ft_memmove.c \
+			ft_insrt_to_str.c \
+			ft_findchr.c \
+			ft_imaxtoa.c \
+			ft_strncpy.c \
+			ft_strnstr.c
 
 OUT = $(patsubst %.c, %.o, $(SRCS))
 
