@@ -6,7 +6,7 @@
 /*   By: stestein <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2018/02/19 10:47:06 by stestein          #+#    #+#             */
-/*   Updated: 2018/03/13 12:14:07 by stestein         ###   ########.fr       */
+/*   Updated: 2018/04/11 13:51:37 by stestein         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -18,7 +18,6 @@
 # include <unistd.h>
 # include <stdlib.h>
 # include <string.h>
-# include <stdio.h>
 
 typedef struct		s_list
 {
@@ -88,6 +87,6 @@ t_list				*ft_lstmap(t_list *lst, t_list *(*f)(t_list *elem));
 void				ft_lstiter(t_list *lst, void (*f)(t_list *elem));
 char				ft_piscine(char const *str);
 char				ft_youtube(char const *str);
-int					ft_skipspace(char *str);
+char				ft_skipspace(char *str);
 
 #endif

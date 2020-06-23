@@ -1,62 +1,46 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   austin_itoa.c                                      :+:      :+:    :+:   */
+/*   ft_itoa.c                                          :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: stestein <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2018/04/30 12:43:35 by stestein          #+#    #+#             */
-/*   Updated: 2018/05/11 12:33:43 by stestein         ###   ########.fr       */
+/*   Created: 2018/03/12 20:31:01 by stestein          #+#    #+#             */
+/*   Updated: 2018/03/12 20:33:16 by stestein         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-void	itoa_isnegative(int *n, int *negative)
+static size_t	ft_get_len(int n)
 {
-	if (*n < 0)
-	{
-		*n *= -1;
-		*negative = 1;
-	}
+	size_t		i;
+
+	i = 1;
+	while (n /= 10)
+		i++;
+	return (i);
 }
 
-char	*ft_itoa(int n)
+char			*ft_itoa(int n)
 {
-	int		tmpn;
-	int		len;
-	int		negative;
-	char	*str;
+	char			*str;
+	size_t			len;
+	unsigned int	tmp;
 
-	if (n == -2147483648)
-		return (ft_strdup("-2147483648"));
-	tmpn = n;
-	len = 2;
-	negative = 0;
-	itoa_isnegative(&n, &negative);
-	while (tmpn /= 10)
-		len++;
-	len += negative;
-	if ((str = (char*)malloc(sizeof(char) * len)) == NULL)
-		return (NULL);
-	str[--len] = '\0';
-	while (len--)
+	len = ft_get_len(n);
+	tmp = n;
+	if (n < 0)
 	{
-		str[len] = n % 10 + '0';
-		n = n / 10;
+		tmp = -n;
+		len++;
 	}
-	if (negative)
+	if (!(str = ft_strnew(len)))
+		return (NULL);
+	str[--len] = tmp % 10 + '0';
+	while (tmp /= 10)
+		str[--len] = tmp % 10 + '0';
+	if (n < 0)
 		str[0] = '-';
 	return (str);
 }
-
-/*int		main()
-{
-	char *result = NULL;
-	int number = 123;
-	int neg_number = -1234567;
-	int i = 0;
-
-	result = ft_itoa(number);
-	return (0);
-}*/
